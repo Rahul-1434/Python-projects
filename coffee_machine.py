@@ -37,16 +37,16 @@ Menu={
 def check_resources(orders):
     for item in orders:
         if resources[item]<orders[item]:
-            print("sorry there is not enough {item}")
+            print(f"sorry there is not enough {item}")
             return False
     return True
 
 def process_coins():
     print("Please insert coins.")
     total=0
-    coins_five=int(input("How manu 5rs coin?: ")) 
-    coins_ten=int(input("How manu 10rs coin?: ")) 
-    coins_twenty=int(input("How manu 20rs coin?: ")) 
+    coins_five=int(input("How many 5rs coin?: ")) 
+    coins_ten=int(input("How many 10rs coin?: ")) 
+    coins_twenty=int(input("How many 20rs coin?: ")) 
     total=coins_five*5 + coins_ten*10 + coins_twenty*20
     return total
 
@@ -74,7 +74,7 @@ while is_on:
         elif choice=="report":
             print(f"water={resources['water']}ml")
             print(f"milk={resources['milk']}ml")
-            print(f"coffee={resources['coffee']}ml")
+            print(f"coffee={resources['coffee']}gm")
             print(f"Money=Rs{profit}")
         else:
             coffee_type=Menu[choice]
